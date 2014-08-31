@@ -608,3 +608,7 @@ $definitions["gambit.active last ? days"] = "{$definitions["gambit.active"]} {$d
 // This is similar to the regular expression for the active gambit, but for the "has n reply(s)" gambit.
 // Usually you just need to change the "has" and "repl".
 $definitions["gambit.gambitHasNReplies"] = "/^has *(?<a>>|<|>=|<=)? *(?<b>\d+) *repl/";
+
+$definitions["home.more"] = "Read More";
+$definitions["home.about.title"] = "About";
+$definitions["home.about"] = "Autonomy Now is a tool to help people discuss, plan and organize action for the liberation and emancipation of all people from coercive systems of control.";

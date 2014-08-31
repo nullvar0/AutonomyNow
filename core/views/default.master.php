@@ -37,19 +37,27 @@ if (!defined("IN_ESOTALK")) exit;
 
 <div id='hdr-inner'>
 
+<?php /*
 <?php if ($data["backButton"]): ?>
 <a href='<?php echo $data["backButton"]["url"]; ?>' id='backButton' title='<?php echo T("Back to {$data["backButton"]["type"]}"); ?>'><i class="icon-chevron-left"></i></a>
 <?php endif; ?>
+*/ ?>
 
-<h1 id='forumTitle'><a href='<?php echo URL(""); ?>'><?php echo $data["forumTitle"]; ?></a></h1>
+<h1 id='forumTitle'>
+	<a href='<?php echo URL(""); ?>'>
+		<?php echo $data["forumTitle"]; ?>
+	</a>
+</h1>
 
 <ul id='mainMenu' class='menu'>
-<?php if (!empty($data["mainMenuItems"])) echo $data["mainMenuItems"]; ?>
+	<?php if (!empty($data["mainMenuItems"])) echo $data["mainMenuItems"]; ?>
 </ul>
 
 <ul id='userMenu' class='menu'>
 <?php echo $data["userMenuItems"]; ?>
-<li><a href='<?php echo URL("conversation/start"); ?>' class='link-newConversation button'><?php echo T("New Conversation"); ?></a></li>
+<?php if(ET::$session->user){ ?>
+	<li class="new-conversation"><a href='<?php echo URL("conversation/start"); ?>' class='link-newConversation button'><?php echo T("New Conversation"); ?></a></li>
+<?php }; ?>
 </ul>
 
 </div>
@@ -60,6 +68,7 @@ if (!defined("IN_ESOTALK")) exit;
 <div id='body'>
 <div id='body-content'>
 <?php echo $data["content"]; ?>
+<div style="clear:both" />
 </div>
 </div>
 

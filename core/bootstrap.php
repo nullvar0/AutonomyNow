@@ -142,6 +142,8 @@ elseif (C("esoTalk.version") != ESOTALK_VERSION) {
 
 // Otherwise, register all the default controllers and admin controllers.
 else {
+	ET::$config["esoTalk.defaultRoute"] = "home";
+	ETFactory::registerController("home", "ETHomeController", PATH_CONTROLLERS."/ETHomeController.class.php");
 	ETFactory::registerController("conversations", "ETConversationsController", PATH_CONTROLLERS."/ETConversationsController.class.php");
 	ETFactory::registerController("conversation", "ETConversationController", PATH_CONTROLLERS."/ETConversationController.class.php");
 	ETFactory::registerController("post", "ETPostController", PATH_CONTROLLERS."/ETPostController.class.php");

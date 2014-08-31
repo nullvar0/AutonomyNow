@@ -72,9 +72,9 @@ $config["esoTalk.meta.keywords"] = null;
 $config["esoTalk.meta.description"] = null;
 
 // Skins and Plugins.
-$config["esoTalk.skin"] = "Default"; // The active skin.
-$config["esoTalk.mobileSkin"] = "Default"; // The active skin for mobile devices.
-$config["esoTalk.adminSkin"] = "Default"; // The active skin for the administrator section.
+$config["esoTalk.skin"] = "Autonomy"; // The active skin.
+$config["esoTalk.mobileSkin"] = "Autonomy"; // The active skin for mobile devices.
+$config["esoTalk.adminSkin"] = "Autonomy"; // The active skin for the administrator section.
 $config["esoTalk.enabledPlugins"] = array("BBCode", "Emoticons"); // A list of enabled plugins.
 
 // Login and registration settings.

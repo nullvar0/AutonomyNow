@@ -471,7 +471,7 @@ public function getResults($conversationIDs, $checkForPermission = false)
 		->from("member sm", "c.startMemberId=sm.memberId", "left")
 		->from("member lpm", "c.lastPostMemberId=lpm.memberId", "left")
 		->from("channel ch", "c.channelId=ch.channelId", "left")
-		->from("post p", "c.sticky AND c.conversationId=p.conversationId AND c.startTime=p.time", "left")
+		->from("post p", "c.conversationId=p.conversationId AND c.startTime=p.time", "left")
 		->bind(":markedAsRead", ET::$session->preference("markedAllConversationsAsRead"))
 		->bind(":memberId", ET::$session->userId);
 

@@ -274,9 +274,12 @@ public function init()
 
 	if ($this->responseType === RESPONSE_TYPE_DEFAULT) {
 
+		$this->addToMenu("main", "forum", "<a href='".URL("conversations/all")."'>".T("Forum")."</a>", 0);
+		$this->addToMenu("main", "blog", "<a href='".URL("conversations/blog")."'>".T("Blog")."</a>", 1);
+
 		// If the user IS NOT logged in, add the 'login' and 'sign up' links to the bar.
 		if (!ET::$session->user) {
-			$this->addToMenu("user", "join", "<a href='".URL("user/join?return=".urlencode($this->selfURL))."' class='link-join'>".T("Sign Up")."</a>");
+			//$this->addToMenu("user", "join", "<a href='".URL("user/join?return=".urlencode($this->selfURL))."' class='link-join'>".T("Sign Up")."</a>");
 			$this->addToMenu("user", "login", "<a href='".URL("user/login?return=".urlencode($this->selfURL))."' class='link-login'>".T("Log In")."</a>");
 		}
 

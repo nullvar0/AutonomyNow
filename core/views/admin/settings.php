@@ -53,6 +53,7 @@ $(function() {
 <label><?php echo T("Home page"); ?></label>
 <div class='subText'><?php echo T("Choose what people will see when they first visit your forum."); ?></div>
 <div class='checkboxGroup'>
+<label class='radio'><?php echo $form->radio("defaultRoute", "home"); ?> <?php echo T("Show the homepage by default"); ?></label>
 <label class='radio'><?php echo $form->radio("defaultRoute", "conversations"); ?> <?php echo T("Show the conversation list by default"); ?></label>
 <label class='radio'><?php echo $form->radio("defaultRoute", "channels"); ?> <?php echo T("Show the channel list by default"); ?></label>
 </div>
