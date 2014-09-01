@@ -13,8 +13,8 @@ strong {font-weight:600}
 
 
 /* Links */
-a {text-decoration:none; color:#666}
-a:hover {text-decoration:none; color:#000; text-decoration: underline;}
+a {text-decoration:none; color:#000; font-weight: bold;}
+a:hover {color:#000; text-decoration: underline;}
 
 
 /* Inline styles */
@@ -33,6 +33,12 @@ p, ul, pre {line-height:1.6em}
 #conversationsFilter{padding-bottom: 20px; margin: 0px;}
 
 #conversations{margin: 0px;	}
+
+#conversationsFilter .channels{padding-left: 36px;}
+
+#conversationsFilter .channelListItem {margin-left: -35px;}
+
+#conversationsFilter .pathItem {margin-left: 0px;}
 
 /* Sheets */
 .sheet h3 {font-weight:300}
@@ -148,7 +154,7 @@ a.button.big {padding:10px; height:auto; line-height:1em}
 .read-more:hover{color:#fff;}
 
 .left{float:left;}
-.cover-photo{max-height:300px; max-width:400px; margin-right:10px; float:left;}
+.cover-photo{margin-right:10px; float:left;}
 
 .banner{color: #fff; margin-top: -20px; margin-bottom: 20px; height: 200px;}
 .banner .banner-img{
@@ -190,7 +196,67 @@ a.button.big {padding:10px; height:auto; line-height:1em}
 
 #admin #adminContent{margin-top: 0px;}
 
+
+
+table {
+    /* Remove spacing between table cells (from Normalize.css) */
+    border-collapse: collapse;
+    border-spacing: 0;
+    empty-cells: show;
+    border: 1px solid #cbcbcb;
+    margin-bottom: 1em;
+}
+
+table caption {
+    color: #000;
+    font: italic 85%/1 arial, sans-serif;
+    padding: 1em 0;
+    text-align: center;
+}
+
+table td,
+table th {
+    border-left: 1px solid #cbcbcb;/*  inner column border */
+    border-width: 0 0 0 1px;
+    font-size: inherit;
+    margin: 0;
+    overflow: visible; /*to make ths where the title is really long work*/
+    padding: 0.5em 1em; /* cell padding */
+}
+table td:first-child,
+table th:first-child {
+    border-left-width: 0;
+}
+
+table thead {
+    background: #e0e0e0;
+    color: #000;
+    text-align: left;
+    vertical-align: bottom;
+}
+
+/*
+   even - #fff (white)
+   odd  - #f2f2f2 (light gray)
+*/
+table td {
+    background-color: transparent;
+}
+
+/* nth-child selector for modern browsers */
+table tr:nth-child(2n-1) td {
+    background-color: #f2f2f2;
+}
+
+/* BORDERED TABLES */
+table td {
+    border-bottom: 1px solid #cbcbcb;
+}
+table tbody > tr:last-child > td {
+    border-bottom-width: 0;
+}
+
+
 @media (max-width: 950px) {
 	#hdr .item-notifications{display: none;}
-  	#hdr .new-conversation {display: none;}
 }

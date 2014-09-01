@@ -62,7 +62,7 @@ class ETPlugin_esoParsedownExtra extends ETPlugin
 	 *
 	 * @return void
 	 */
-	/*public function handler_conversationController_getEditControls($sender, &$controls, $id)
+	public function handler_conversationController_getEditControls($sender, &$controls, $id)
 	{
 		addToArrayString($controls, "fixed", "<a href='javascript:markDown.fixed(\"$id\");void(0)' title='".T("Code")."' class='control-fixed'><i class='icon-code'></i></a>", 0);
 		addToArrayString($controls, "image", "<a href='javascript:markDown.image(\"$id\");void(0)' title='".T("Image")."' class='control-img'><i class='icon-picture'></i></a>", 0);
@@ -72,7 +72,7 @@ class ETPlugin_esoParsedownExtra extends ETPlugin
 		addToArrayString($controls, "italic", "<a href='javascript:markDown.italic(\"$id\");void(0)' title='".T("Italic")."' class='control-i'><i class='icon-italic'></i></a>", 0);
 		addToArrayString($controls, "bold", "<a href='javascript:markDown.bold(\"$id\");void(0)' title='".T("Bold")."' class='control-b'><i class='icon-bold'></i></a>", 0);
 
-	}*/
+	}
 
 	public function handler_format_beforeFormat($sender)
 	{
@@ -99,7 +99,7 @@ class ETPlugin_esoParsedownExtra extends ETPlugin
 	public function handler_conversationController_renderBefore($sender)
 	{
 		$sender->addCSSFile($this->resource("markdown.css"));
-		//$sender->addJSFile($this->resource("markdown.js"));
+		$sender->addJSFile($this->resource("markdown.js"));
 	}
 
 }

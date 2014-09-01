@@ -274,7 +274,7 @@ public function init()
 
 	if ($this->responseType === RESPONSE_TYPE_DEFAULT) {
 
-		$this->addToMenu("main", "forum", "<a href='".URL("conversations/all")."'>".T("Forum")."</a>", 0);
+		$this->addToMenu("main", "forum", "<a href='".URL("channels")."'>".T("Forum")."</a>", 0);
 		$this->addToMenu("main", "blog", "<a href='".URL("conversations/blog")."'>".T("Blog")."</a>", 1);
 
 		// If the user IS NOT logged in, add the 'login' and 'sign up' links to the bar.
